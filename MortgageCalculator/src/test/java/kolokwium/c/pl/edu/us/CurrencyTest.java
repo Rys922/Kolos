@@ -6,13 +6,15 @@ import org.junit.Test;
 
 public class CurrencyTest
 {
+	Currency cur = new Currency("Testy",20.0);
 	@Test
-	public void convertFromPlnTest() {
-		fail("Not yet implemented");
+	public void convertFromPLNTest() {
+		assertEquals(5,cur.convertFromPLN(4),80);
 	}
+
 	
 	@Test
 	public void convertToPlnTest() {
-		fail("Not yet implemented");
+		assertEquals(5,cur.convertToPLN(4),80);
 	}
 }
