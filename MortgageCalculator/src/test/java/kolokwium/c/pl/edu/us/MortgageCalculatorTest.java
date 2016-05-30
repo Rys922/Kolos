@@ -19,7 +19,7 @@ public class MortgageCalculatorTest
 	
 	 public MortgageCalculatorTest(double sum, double interest, int periods){
 		_sum = sum;
-		interest = interest;
+		this.interest = interest;
 		_periods = periods;
 	}
 	 

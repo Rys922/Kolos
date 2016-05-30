@@ -9,7 +9,7 @@ public class CurrencyTest
 	Currency cur = new Currency("Testy",20.0);
 	@Test
 	public void convertFromPLNTest() {
-		assertEquals(0.2,cur.convertFromPLN(4),0.001);
+		assertEquals(0.25,cur.convertFromPLN(5),0.001);
 	}
 	
 	@Test
