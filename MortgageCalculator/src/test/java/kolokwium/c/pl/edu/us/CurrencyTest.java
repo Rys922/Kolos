@@ -9,12 +9,11 @@ public class CurrencyTest
 	Currency cur = new Currency("Testy",20.0);
 	@Test
 	public void convertFromPLNTest() {
-		assertEquals(5,cur.convertFromPLN(4),80);
+		assertEquals(0.2,cur.convertFromPLN(4),0.001);
 	}
-
 	
 	@Test
 	public void convertToPlnTest() {
-		assertEquals(5,cur.convertToPLN(4),80);
+		assertEquals(80,cur.convertToPLN(4),0.001);
 	}
 }

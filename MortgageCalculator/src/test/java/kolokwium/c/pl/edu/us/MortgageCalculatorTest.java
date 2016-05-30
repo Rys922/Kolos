@@ -2,10 +2,33 @@ package kolokwium.c.pl.edu.us;
 
 import static org.junit.Assert.*;
 
-import org.junit.Test;
+import java.util.Arrays;
+import java.util.Collection;
 
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)
 public class MortgageCalculatorTest
 {
+	private double _sum;
+	private double interest;
+	private int _periods;
+	
+	 public MortgageCalculatorTest(double sum, double interest, int periods){
+		_sum = sum;
+		interest = interest;
+		_periods = periods;
+	}
+	 
+	 @Parameters
+	 public static Collection<Object[]> data() {
+		 Object[][] data = new Object[][] { { 1 }, { 5 } };
+		 return Arrays.asList(data);
+	 }
+	
 	@Test
 	public void numberOfInstallmentsTest() {
 		fail("Not yet implemented");
@@ -21,3 +44,4 @@ public class MortgageCalculatorTest
 		fail("Not yet implemented");
 	}
 }
+
